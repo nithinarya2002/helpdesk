@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  /* form{
+    height: 100px;
+    width: 500px;
+  } */
+  
+  .main_div{
+    width: 75%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Card{
+    width: 235%;
+    height: 600px;
+    background-color: rgba(241, 240, 240, 0.745);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px;
+    border-radius: 15px;
+    box-shadow: 0px 13px 10px -7px rgba(0,0,0,0.5);
+  }
+
+  button{
+    box-shadow: 0px 30px 18px -8x rgba(0,0,0,0.1);
+    transform: scale(1.05,1.05);
+  }
+
+  h2{
+    color: #4285F4;
+    background:transparent;
+    text-shadow: 0 2px 2px black;
+    border-radius: 8px;
+    box-shadow: 0px 13px 10px -7px rgba(0,0,0,0.5);
+  }
+  
+  input{
+    width: 75%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    margin: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 13px 10px -7px rgba(0,0,0,0.5);
+  }
+  
+  button{
+    /* height: 20px; */
+    line-height: 24px;
+    padding: 0 20px;
+    background-color: #4285F4;
+    color: white;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  textarea{
+    width: 75%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    margin: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 13px 10px -7px rgba(0,0,0,0.5);
+  }
