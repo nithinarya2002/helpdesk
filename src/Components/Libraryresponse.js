@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react'
 // import questions from './api';
 import './accordion.css';
-import MyAccordion from './MyAccordion';
+import MyAccordion1 from './MyAccordion1';
 import { useState } from 'react';
 
-const Library = () => {
+const Libraryresponse = () => {
   const [data,setdata]=useState([]);
-  const calllibrarypage=async()=>{
+  const callresponsepage=async()=>{
     try {
-      const res=await fetch('/librarydata',{
+      const res=await fetch('/resplib',{
         method:'GET',
         headers:{
           Accept:'appllication/json',
@@ -18,25 +18,24 @@ const Library = () => {
       });
       const data=await res.json();
       setdata(data);
-      console.log('libdata',data)
+      console.log('response',data)
     } catch (error) {
       console.log(error);
     }
   }
-  calllibrarypage();
   // callaecpage();   it will loop infinitely so use 'useEffect
-  // useEffect(()=>{
-  //   calllibrarypage();
-  // },[]);
+  useEffect(()=>{
+    callresponsepage();
+  },[]);
   return (
     <>
         <section className='main-div'>
-        <h1>Library Queries</h1>
+        <h1>Library Query Responses</h1>
         {console.log('func',data)}
         {
         data.map((curdata)=>{
             console.log(curdata)
-            return <MyAccordion key={curdata._id} {...curdata}/>
+            return <MyAccordion1 key={curdata._id} {...curdata}/>
         })
         }
         </section>
@@ -44,4 +43,4 @@ const Library = () => {
   )
 }
 
-export default Library
+export default Libraryresponse;

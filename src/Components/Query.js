@@ -30,7 +30,7 @@ const Query=()=>{
                 body:JSON.stringify({name,rno,sem,branch,dept,query})
               });
               const data=await res.json();
-              if(res.status===422 && !data){
+              if(res.status===422  || !data){
                 window.alert('Failed to submit query');
                 console.log('Failed to submit query');
               }
@@ -52,6 +52,7 @@ const Query=()=>{
                     <h1>Submit Query!</h1>
                     <input
                     type='text'
+                    autoComplete='off'
                     placeholder='Enter your name'
                     onChange={f1}
                     name='name'
@@ -59,6 +60,7 @@ const Query=()=>{
                     />
                     <input
                     type='number'
+                    autoComplete='off'
                     placeholder='Enter your Rollnumber'
                     onChange={f1}
                     name='rno'
@@ -66,6 +68,7 @@ const Query=()=>{
                     />
                     <input
                     type='number'
+                    autoComplete='off'
                     placeholder='Enter your Semester and year'
                     onChange={f1}
                     name='sem'
@@ -73,6 +76,7 @@ const Query=()=>{
                     />
                      <input
                     type='text'
+                    autoComplete='off'
                     placeholder='Enter your branch'
                     onChange={f1}
                     name='branch'
@@ -80,6 +84,7 @@ const Query=()=>{
                     />
                     <input
                     type='text'
+                    autoComplete='off'
                     placeholder='Enter concerned Department'
                     onChange={f1}
                     name='dept'
@@ -87,6 +92,7 @@ const Query=()=>{
                     />
                     <textarea 
                     type='text'
+                    autoComplete='off'
                     placeholder='Enter your Query'
                     onChange={f1}
                     name='query'

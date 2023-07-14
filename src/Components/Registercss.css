@@ -20,7 +20,7 @@
   .Card{
     width: 235%;
     height: 600px;
-    background-color: rgba(241, 240, 240, 0.745);
+    /* background-color: rgba(241, 240, 240, 0.745); */
     display: flex;
     flex-direction: column;
     justify-content: center;

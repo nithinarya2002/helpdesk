@@ -6,7 +6,9 @@ const Select = () => {
   return (
     <>
     <button type='submit' onClick={()=>navigate('/query')}>Query</button>
+    <button type='submit' onClick={()=>navigate('/response')}>Responses</button>
     <button type='submit' onClick={()=>navigate('/dept')}>Faculty</button>
+   
     </>
   )
 }

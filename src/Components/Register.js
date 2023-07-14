@@ -117,6 +117,7 @@ let Register = () => {
             />
             <input
               type='text'
+             
               placeholder='Enter your email'
               onChange={inp1}
               value={userinfo.email}

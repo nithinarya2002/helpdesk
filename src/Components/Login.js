@@ -1,7 +1,11 @@
 import React from 'react'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { UserContext } from '../App';
+
 const Login = () => {
+  const {state,dispatch}=useContext(UserContext);
   const [email,setemail]=useState('');
   const [password,setpassword]=useState('');
   const navigate=useNavigate();
@@ -26,6 +30,7 @@ const Login = () => {
       console.log('Invalid credentials');
     }
     else{
+      dispatch({type:"USER",payload:true})
       window.alert('Login Successful');
       console.log('Login Successful!!!');
       navigate('/select');
@@ -41,6 +46,7 @@ const Login = () => {
           <div className='Card'>
             <h2>Login</h2>
             <input
+              autoComplete='off'
               type='text'
               placeholder='Enter your email'
               onChange={(e)=>setemail(e.target.value)}
@@ -48,6 +54,7 @@ const Login = () => {
               name='email'         //to know or identify which tag calls the function.
             />
             <input
+            autoComplete='off'
              type="password" 
              placeholder='Enter your password'
              onChange={(e)=>setpassword(e.target.value)}
